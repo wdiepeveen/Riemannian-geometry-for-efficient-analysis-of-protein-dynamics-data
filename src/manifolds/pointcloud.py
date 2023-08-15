@@ -102,27 +102,6 @@ class PointCloud:
             return self.s_geodesic(x, y, tau, base=self.base_point, step_size=step_size, max_iter=max_iter, tol=tol,
                                    debug=debug)
 
-    def s_bezier(self, x, tau, base=None, step_size=1., max_iter=100, tol=1e-4, debug=False):
-        """
-
-        :param x: N x 1 x n x d tensor
-        :param tau: 1 tensor
-        :return: 1 x 1 x n x d tensor
-        """
-        N = x.shape[0]
-        if N == 2:
-            if base is not None:
-                return self.s_geodesic(x[0][None], x[1][None], tau, base=base,
-                                       step_size=step_size, max_iter=max_iter, tol=tol, debug=debug)
-            else:
-                return self.s_geodesic(x[0][None], x[1][None], tau, base=self.base_point,
-                                       step_size=step_size, max_iter=max_iter, tol=tol, debug=debug)
-        else:
-            return self.s_geodesic(
-                self.s_bezier(x[0:N - 1], tau, base=base, step_size=step_size, max_iter=max_iter, tol=tol, debug=debug),
-                self.s_bezier(x[1:], tau, base=base, step_size=step_size, max_iter=max_iter, tol=tol, debug=debug),
-                tau, base=base, step_size=step_size, max_iter=max_iter, tol=tol, debug=debug)
-
     def s_exp(self, x, X, c=1 / 4, base=None, step_size=1., max_iter=100, tol=1e-3, debug=False):
         """
 
