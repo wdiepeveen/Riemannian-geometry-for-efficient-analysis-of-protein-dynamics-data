@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar  7 12:51:24 2022
-
-@author: carlosesteveyague
-"""
-
 import numpy as np
 
 from Bio.PDB import MMCIFParser, PDBParser
