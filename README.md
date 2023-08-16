@@ -1,6 +1,6 @@
 # Riemannian geometry for efficient analysis of protein dynamics data
 
-    [1] W. Diepeveen, C. Esteve-Yagüe, J. Lellmann, O. Öktem, C-B. Schönlieb,  
+    [1] W. Diepeveen, C. Esteve-Yagüe, J. Lellmann, O. Öktem, C-B. Schönlieb.  
     Riemannian geometry for efficient analysis of protein dynamics data
     arXiv preprint arXiv:2308.07818. 2023 Aug 15.
 
